@@ -1,0 +1,42 @@
+<app-header (togglSideBarforme)="sidebartoggler()"></app-header>
+<mat-drawer-container class="example-container">
+  <mat-drawer [opened]="sidebarOpen" mode="push" >
+<!-- sidebar -->
+    <mat-nav-list>
+      <div class="profile-card">
+        <div class="header">
+          <h2>Sankar</h2>
+          <h4>sankar30031997@gmail.com</h4>
+        </div>
+      <img src="../../assets/images/sankar.jpg" alt="sankar">
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader>Pages </h2>
+      <a  mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+       <a routerLink="/post" mat-list-item routerLinkActive="list-item-active">Post</a>
+
+
+      <mat-divider>
+
+      </mat-divider>
+
+
+      <h2 matSubheader>Tools</h2>
+      <a routerLinkActive="list-item-active" mat-list-item routerLink="/posts"><mat-icon>import_contacts</mat-icon>Contacts</a>
+      <a routerLinkActive="list-item-active" mat-list-item routerLink="/posts"><mat-icon>contact_phone</mat-icon>leads</a>
+      </mat-nav-list>
+
+    <!-- </sidebar> -->
+
+  </mat-drawer>
+  <mat-drawer-content >
+
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer>
+
+</app-footer>
